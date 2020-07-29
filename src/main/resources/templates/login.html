@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>User Authentication</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/home.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+
+        <!-- Login Form -->
+        <div class="main">
+
+            <p align="center" font size="36">Admin Panel - Enter Credentials</p>
+            <!-- Return Notifications -->
+            <div th:if="${param.error}">
+                <p align="center">Invalid username and password</p>
+            </div>
+            <div th:if="${param.logout}">
+                <p align="center">You have been logged out</p>
+            </div>
+            <form th:action="@{/login}" method="post">
+
+                <div><label><input type="text" align="center" name="username" placeholder="Username"/> </label></div>
+
+                <div><label><input type="password" align="center" name="password" placeholder="Password"/> </label>
+                </div>
+                <div><input type="submit" align="center" value="Sign In"/></div>
+                <br>
+                <p align="center"><a href="/">Return to Homepage</a></p>
+
+            </form>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">HanshenWang.com &copy; 2020</p>
+    </footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/home.js"></script>
+
+</body>
+</html>

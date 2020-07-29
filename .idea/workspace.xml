@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="013614f8-4384-42b8-a55b-40810b66f968" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZOuFsOQi3MrLxERXYOp9Ly4sDt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Login_v14/login.html" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project-isidore\src\main\resources\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project-isidore\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ProjectIsidoreApplication">
+    <configuration name="ProjectIsidoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hanshenwang.projectisidore.ProjectIsidoreApplication" />
+      <module name="project-isidore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hanshenwang.projectisidore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in project-isidore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-isidore" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProjectIsidoreApplication" />
+        <item itemvalue="JUnit.All in project-isidore" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="013614f8-4384-42b8-a55b-40810b66f968" name="Default Changelist" comment="" />
+      <created>1584722361394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584722361394</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1685" y="530" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584738369003">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1685" y="530" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1584738369003" />
+    <state x="1700" y="478" key="FileChooserDialogImpl" timestamp="1584752160592">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1700" y="478" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1584752160592" />
+    <state width="1234" height="413" key="GridCell.Tab.0.bottom" timestamp="1584911735734">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1584911735734" />
+    <state width="1234" height="413" key="GridCell.Tab.0.center" timestamp="1584911735734">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1584911735734" />
+    <state width="1234" height="413" key="GridCell.Tab.0.left" timestamp="1584911735734">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1584911735734" />
+    <state width="1234" height="413" key="GridCell.Tab.0.right" timestamp="1584911735734">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1584911735734" />
+    <state width="1234" height="413" key="GridCell.Tab.1.bottom" timestamp="1584852638164">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1584852638164" />
+    <state width="1234" height="413" key="GridCell.Tab.1.center" timestamp="1584852638164">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1584852638164" />
+    <state width="1234" height="413" key="GridCell.Tab.1.left" timestamp="1584852638164">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1584852638164" />
+    <state width="1234" height="413" key="GridCell.Tab.1.right" timestamp="1584852638164">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1234" height="413" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1584852638164" />
+    <state x="1423" y="365" key="SettingsEditor" timestamp="1584798533411">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1423" y="365" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1584798533411" />
+    <state x="1628" y="547" key="com.intellij.ide.util.TipDialog" timestamp="1584722371495">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1628" y="547" key="com.intellij.ide.util.TipDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1584722371495" />
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1584911731553">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1584911731553" />
+  </component>
+</project>
