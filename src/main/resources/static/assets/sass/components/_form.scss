@@ -89,7 +89,7 @@
 		@include vendor('transition', (
 			'border-color #{_duration(transition)} ease-in-out',
 			'box-shadow #{_duration(transition)} ease-in-out',
-			'background-color #{_duration(transition)} ease-in-out'
+			'background-color #{_duration(transition)} ease-in-out'
 		));
 		background-color: transparent;
 		border-radius: _size(border-radius);
@@ -175,7 +175,7 @@
 				@include vendor('transition', (
 					'border-color #{_duration(transition)} ease-in-out',
 					'box-shadow #{_duration(transition)} ease-in-out',
-					'background-color #{_duration(transition)} ease-in-out'
+					'background-color #{_duration(transition)} ease-in-out'
 				));
 				border-radius: _size(border-radius);
 				border: solid _size(border-width) _palette(border);

@@ -21,8 +21,8 @@
 
 // Font.
 	$font: (
-		family:						('Source Sans Pro', sans-serif),
-		family-fixed:				('Courier New', monospace),
+		family:						('Merriweather', sans-serif),
+		family-fixed:				('Merriweather', monospace),
 		weight:						300,
 		weight-bold:				600,
 		letter-spacing:				0.2rem,
@@ -34,10 +34,10 @@
 		bg:							#1b1f22,
 		bg-alt:						#000000,
 		bg-overlay:					rgba(19,21,25,0.5),
-		fg:							#000000,
-		fg-bold:					#000000,
+		fg:							#ffffff,
+		fg-bold:					#ffffff,
 		fg-light:					rgba(255,255,255,0.5),
-		border:						#000000,
+		border:						#ffffff,
 		border-bg:					rgba(255,255,255,0.075),
 		border-bg-alt:				rgba(255,255,255,0.175)
 	);
