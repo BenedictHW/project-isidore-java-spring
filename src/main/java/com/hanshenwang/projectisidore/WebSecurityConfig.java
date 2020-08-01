@@ -18,38 +18,24 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .antMatchers("/static/**","/resources/**","/assets/**",
-                        "/css/**", "/js/**", "/sass/**","/webfonts/**", "/base/**",
-                        "/components/**", "/layout/**", "/libs/**", "/images/**",
-                        "/fonts/**"
+        web.ignoring().antMatchers("/static/**", "/resources/**", "/assets/**", "/css/**", "/js/**", "/sass/**",
+                "/webfonts/**", "/base/**", "/components/**", "/layout/**", "/libs/**", "/images/**", "/fonts/**"
 
-                        );
+        );
     }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/", "/home","/login").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/login").permitAll()
-                .defaultSuccessUrl("/blog", true)
-                .and()
-                .logout().permitAll();
+        http.authorizeRequests().antMatchers("/", "/home", "/login", "/contactme", "/about", "/work", "/blog/**").permitAll().anyRequest()
+                .authenticated().and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/blog", true)
+                .and().logout().permitAll();
     }
 
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
-        UserDetails user =
-                User.withDefaultPasswordEncoder()
-                        .username("user")
-                        .password("password")
-                        .roles("ADMIN")
-                        .build();
+        UserDetails user = User.withDefaultPasswordEncoder().username("user").password("password").roles("ADMIN")
+                .build();
 
         return new InMemoryUserDetailsManager(user);
     }

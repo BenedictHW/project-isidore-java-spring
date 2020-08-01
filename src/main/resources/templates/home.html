@@ -1,105 +1,103 @@
 <!DOCTYPE HTML>
 <!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	   Dimension by HTML5 UP
+	   html5up.net | @ajlkn
+	   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-	<head>
-		<title>HanshenWang.com - Homepage</title>
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/home.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+	  <head>
+		    <title>HanshenWang.com - Homepage</title>
+		    <meta charset="utf-8" />
+		    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		    <link rel="stylesheet" href="assets/css/home.css" />
+		    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	  </head>
+	  <body class="is-preload">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="image icon">
-								<a th:href="@{/blog}">
-								<img src="assets/images/ProfilePicture.jpg" alt="" />
-								</a>
-							</span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Hello, I'm Hanshen</h1>
-								<p>Welcome to my website. Site is currently under construction! Please have patience. Thank you.</p>
+		    <!-- Wrapper -->
+			  <div id="wrapper">
 
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#journal">Journal</a></li>
-								<li><a th:href="@{/contactme}">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+				    <!-- Header -->
+					  <header id="header">
+						    <div class="logo">
+							      <span class="image icon">
+								        <a th:href="@{/login}">
+								            <img src="assets/images/ProfilePicture.jpg" alt="" />
+								        </a>
+							      </span>
+						    </div>
+						    <div class="content">
+							      <div class="inner">
+								        <h1>Hello, I'm Hanshen</h1>
+								        <p>Welcome to my website. Site is currently under construction! Please have patience. Thank you.</p>
+							      </div>
+						    </div>
+						    <nav>
+							      <ul>
+								        <li><a th:href="@{/about}">About</a></li>
+								        <li><a th:href="@{/work}">Work</a></li>
+								        <li><a th:href="@{/blog}">Blog</a></li>
+								        <li><a th:href="@{/contactme}">Contact</a></li>
+							      </ul>
+						    </nav>
+					  </header>
 
-				<!-- Main -->
-					<div id="main">
+				    <!-- Main -->
+					  <div id="main">
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="assets/images/pic01.jpg" alt="" /></span>
-								<p>Thanks for stopping by! This website is a personal portfolio and side project of mine. More information about my professional experience can be found <a href="#work">here</a>.</p>
+						    <!-- Intro -->
+							  <article id="intro">
+								    <h2 class="major">Intro</h2>
+								    <span class="image main"><img src="assets/images/pic01.jpg" alt="" /></span>
+								    <p>Thanks for stopping by! This website is a personal portfolio and side project of mine. More information about my professional experience can be found <a href="#work">here</a>.</p>
 
-								<p>I endeavour to be quiet and to do my own business, and work with my own hands. As such, the journal section of this website is a private matter. However, please do not hesitate to <a href="#contact">reach out to me</a> should you have any questions, queries or concerns!
-								</p>
+								    <p>I endeavour to be quiet and to do my own business, and work with my own hands. As such, the journal section of this website is a private matter. However, please do not hesitate to <a href="#contact">reach out to me</a> should you have any questions, queries or concerns!
+								    </p>
 
-								<p>Cheers,</p>
+								    <p>Cheers,</p>
 
-								<p>Hanshen</p>								
-							</article>
+								    <p>Hanshen</p>								
+							  </article>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								
+						    <!-- Work -->
+							  <article id="work">
+								    <h2 class="major">Work</h2>
+								    <!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
+								    
 
-								<iframe width='100%' height='1500'src="https://docs.google.com/document/d/e/2PACX-1vRA8270gjcNh4MG3C2jODynwNGzjpFfAEumoglEdYwPsLaaLP1tEX-ylQgo9b1--w/pub?embedded=true"></iframe>
+								    <iframe width='100%' height='1500'src="https://docs.google.com/document/d/e/2PACX-1vRA8270gjcNh4MG3C2jODynwNGzjpFfAEumoglEdYwPsLaaLP1tEX-ylQgo9b1--w/pub?embedded=true"></iframe>
 
-							</article>
+							  </article>
 
-						<!-- journal -->
-							<article id="journal">
-								<h2 class="major">Journal</h2>
-								<span class="image main"><img src="assets/images/pic03.jpg" alt="" /></span>
-								<p><i>"If you wou'd not be forgotten, as soon as you are dead and rotten, either write things worth reading, or do things worth writing" - Benjamin Franklin, Poor Richard's Almanack.</i></p>
+						    <!-- journal -->
+							  <article id="journal">
+								    <h2 class="major">Journal</h2>
+								    <span class="image main"><img src="assets/images/pic03.jpg" alt="" /></span>
+								    <p><i>"If you wou'd not be forgotten, as soon as you are dead and rotten, either write things worth reading, or do things worth writing" - Benjamin Franklin, Poor Richard's Almanack.</i></p>
 
-								<p>The raison d'être for this section. A digital diary for mostly private musings. Posts that have been made public will appear here. As always, opinions expressed here are my solely my own. </p>
+								    <p>The raison d'être for this section. A digital diary for mostly private musings. Posts that have been made public will appear here. As always, opinions expressed here are my solely my own. </p>
 
-							</article>
+							  </article>
 
-					</div>
+					  </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">HanshenWang.com &copy; 2020</p>
-					</footer>
+				    <!-- Footer -->
+					  <footer id="footer">
+						    <p class="copyright">HanshenWang.com &copy; 2020</p>
+					  </footer>
 
-			</div>
+			  </div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+		    <!-- BG -->
+			  <div id="bg"></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/home.js"></script>
+		    <!-- Scripts -->
+			  <script src="assets/js/jquery.min.js"></script>
+			  <script src="assets/js/browser.min.js"></script>
+			  <script src="assets/js/breakpoints.min.js"></script>
+			  <script src="assets/js/util.js"></script>
+			  <script src="assets/js/home.js"></script>
 
-	</body>
+	  </body>
 </html>
