@@ -944,7 +944,7 @@ input, select, textarea {
 
 /* Table */
 
-	.table-wrapper {
+	.table-content {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
 	}
@@ -1194,9 +1194,9 @@ input, select, textarea {
 			background-color: #000000;
 		}
 
-/* Wrapper */
+/* Content */
 
-	#wrapper {
+	#content {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1220,14 +1220,14 @@ input, select, textarea {
 		z-index: 3;
 	}
 
-		#wrapper:before {
+		#content:before {
 			content: '';
 			display: block;
 		}
 
 		@media screen and (max-width: 1680px) {
 
-			#wrapper {
+			#content {
 				padding: 3rem 2rem;
 			}
 
@@ -1235,7 +1235,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#wrapper {
+			#content {
 				padding: 2rem 1rem;
 			}
 
@@ -1243,7 +1243,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
-			#wrapper {
+			#content {
 				padding: 1rem;
 			}
 

@@ -13,8 +13,8 @@
 	  </head>
 	  <body class="single is-preload">
 
-		    <!-- Wrapper -->
-			  <div id="wrapper">
+		    <!-- Content -->
+			  <div id="content">
 
 				    <!-- Header -->
 					  <header id="header">
@@ -25,72 +25,9 @@
 								        <li><a th:href="@{/work}">Work</a></li>
 								        <li><a th:href="@{/blog}">Blog</a></li>
 								        <li><a th:href="@{/contactme}">Contact</a></li>
-								        <li><a href="#">Adipiscing</a></li>
-							      </ul>
-						    </nav>
-						    <nav class="main">
-							      <ul>
-								        <li class="search">
-									          <a class="fa-search" href="#search">Search</a>
-									          <form id="search" method="get" action="#">
-										            <input type="text" name="query" placeholder="Search" />
-									          </form>
-								        </li>
-								        <li class="menu">
-									          <a class="fa-bars" href="#menu">Menu</a>
-								        </li>
 							      </ul>
 						    </nav>
 					  </header>
-
-				    <!-- Menu -->
-					  <section id="menu">
-
-						    <!-- Search -->
-							  <section>
-								    <form class="search" method="get" action="#">
-									      <input type="text" name="query" placeholder="Search" />
-								    </form>
-							  </section>
-
-						    <!-- Links -->
-							  <section>
-								    <ul class="links">
-									      <li>
-										        <a href="#">
-											          <h3>Lorem ipsum</h3>
-											          <p>Feugiat tempus veroeros dolor</p>
-										        </a>
-									      </li>
-									      <li>
-										        <a href="#">
-											          <h3>Dolor sit amet</h3>
-											          <p>Sed vitae justo condimentum</p>
-										        </a>
-									      </li>
-									      <li>
-										        <a href="#">
-											          <h3>Feugiat veroeros</h3>
-											          <p>Phasellus sed ultricies mi congue</p>
-										        </a>
-									      </li>
-									      <li>
-										        <a href="#">
-											          <h3>Etiam sed consequat</h3>
-											          <p>Porta lectus amet ultricies</p>
-										        </a>
-									      </li>
-								    </ul>
-							  </section>
-
-						    <!-- Actions -->
-							  <section>
-								    <ul class="actions stacked">
-									      <li><a href="#" class="button large fit">Log In</a></li>
-								    </ul>
-							  </section>
-
-					  </section>
 
 				    <!-- Main -->
 					  <div id="main">
@@ -103,76 +40,14 @@
 									      </div>
 									      <div class="meta">
 										        <time class="published" datetime="2015-11-01">November 1, 2015</time>
-										        <a href="#" class="author"><span class="name">Jane Doe</span><img src="assets/images/avatar.jpg" alt="" /></a>
+										        <a href="#" class="author"><span class="name">Jane Doe</span><img src="assets/images/avatar.jpg"/></a>
 									      </div>
 								    </header>
-								    <span class="image featured"><img src="assets/images/pic01.jpg" alt="" /></span>
+								    <span class="image featured"><img src="assets/images/pic01.jpg"/></span>
 
-
+				            <!-- Table of Contents -->
                     <main>
-	                      <div>
-		                        <h1>Smooth Scrolling Sticky ScrollSpy Navigation</h1>
-		                        <section id="introduction">
-			                          <h2>Introduction</h2>
-			                          <p>…</p>
-		                        </section>
-		                        <section id="request-response">
-			                          <h2>Request &amp; Response</h2>
-			                          <p>…</p>
-		                        </section>
-		                        <section id="authentication">
-			                          <h2>Authentication</h2>
-			                          <p>…</p>
-		                        </section>
-		                        <section id="endpoints">
-			                          <h2>Endpoints</h2>
-			                          <section id="endpoints--root">
-				                            <h3>Root</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--cities-overview">
-				                            <h3>Cities Overview</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--city-detail">
-				                            <h3>City Detail</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--city-config">
-				                            <h3>City Config</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--city-spots-overview">
-				                            <h3>City Spots Overview</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--city-spot-detail">
-				                            <h3>City Spot Detail</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--city-icons-overview">
-				                            <h3>City Icons Overview</h3>
-				                            <p>…</p>
-			                          </section>
-			                          <section id="endpoints--city-icon-detail">
-				                            <h3>City Icon Detail</h3>
-				                            <p>…</p>
-			                          </section>
-		                        </section>
-		                        <section id="links">
-			                          <h2>Links</h2>
-			                          <p>…</p>
-		                        </section>
-		                        <section id="expanders">
-			                          <h2>Expanders</h2>
-			                          <p>…</p>
-		                        </section>
-		                        <section id="filters">
-			                          <h2>Filters</h2>
-			                          <p>…</p>
-		                        </section>
-	                      </div>
-	                      <nav class="section-nav">
+                        <nav class="table-of-contents">
 		                        <ol>
 			                          <li><a href="#introduction">Introduction</a></li>
 			                          <li><a href="#request-response">Request &amp; Response</a></li>
@@ -194,18 +69,94 @@
 			                          <li class=""><a href="#filters">Filters</a></li>
 		                        </ol>
 	                      </nav>
+	                      <div>
+		                        <section id="introduction">
+			                          <h2>Introduction</h2>
+			                          <p>Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+                                </p>
+		                        </section>
+		                        <section id="request-response">
+			                          <h2>Request &amp; Response</h2>
+			                          <p>Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+                                </p>
+		                        </section>
+		                        <section id="authentication">
+			                          <h2>Authentication</h2>
+			                          <p>Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+                                </p>
+		                        </section>
+		                        <section id="endpoints">
+			                          <h2>Endpoints</h2>
+			                          <section id="endpoints--root">
+				                            <h3>Root</h3>
+				                            <p>Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--cities-overview">
+				                            <h3>Cities Overview</h3>
+				                            <p>Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--city-detail">
+				                            <h3>City Detail</h3>
+				                            <p>Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
+
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--city-config">
+				                            <h3>City Config</h3>
+				                            <p>Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--city-spots-overview">
+				                            <h3>City Spots Overview</h3>
+				                            <p>Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--city-spot-detail">
+				                            <h3>City Spot Detail</h3>
+				                            <p>Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--city-icons-overview">
+				                            <h3>City Icons Overview</h3>
+				                            <p>Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+
+                                    </p>
+			                          </section>
+			                          <section id="endpoints--city-icon-detail">
+				                            <h3>City Icon Detail</h3>
+				                            <p>Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
+
+                                    </p>
+			                          </section>
+		                        </section>
+		                        <section id="links">
+			                          <h2>Links</h2>
+			                          <p>Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
+
+                                </p>
+		                        </section>
+		                        <section id="expanders">
+			                          <h2>Expanders</h2>
+			                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.
+
+                                </p>
+		                        </section>
+		                        <section id="filters">
+			                          <h2>Filters</h2>
+			                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.
+
+                                </p>
+		                        </section>
+	                      </div>
                     </main>
 
-
-
-
-								    <footer>
-									      <ul class="stats">
-										        <li><a href="#">General</a></li>
-										        <li><a href="#" class="icon solid fa-heart">28</a></li>
-										        <li><a href="#" class="icon solid fa-comment">128</a></li>
-									      </ul>
-								    </footer>
 							  </article>
 
 					  </div>

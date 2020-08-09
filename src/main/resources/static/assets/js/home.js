@@ -8,7 +8,7 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$wrapper = $('#wrapper'),
+		$content = $('#content'),
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
@@ -42,10 +42,10 @@
 
 				flexboxFixTimeoutId = setTimeout(function() {
 
-					if ($wrapper.prop('scrollHeight') > $window.height())
-						$wrapper.css('height', 'auto');
+					if ($content.prop('scrollHeight') > $window.height())
+						$content.css('height', 'auto');
 					else
-						$wrapper.css('height', '100vh');
+						$content.css('height', '100vh');
 
 				}, 250);
 

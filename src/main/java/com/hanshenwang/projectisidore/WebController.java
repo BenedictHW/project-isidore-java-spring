@@ -8,7 +8,7 @@ public class WebController {
 
     @GetMapping("/")
     public String homeInit()  {
-        return "single";
+        return "post0001";
     }
 
     @GetMapping("/home")
@@ -18,7 +18,7 @@ public class WebController {
 
     @GetMapping("/blog")
     public String blogInit()  {
-        return "blog";
+        return "blogtemp";
     }
 
     @GetMapping("/login")

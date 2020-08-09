@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2020-08-05 Wed 17:53 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacemacs via WSL on Windows 10 Tutorial</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Hanshen Wang">
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+<div id="content">
+<header id="header">
+<h1><a th:href="@{/home}">HanshenWang</a></h1>
+<nav class="links">
+<ul>
+<li><a th:href="@{/about}">About</a></li>
+<li><a th:href="@{/work}">Work</a></li>
+<li><a th:href="@{/blog}">Blog</a></li>
+<li><a th:href="@{/contactme}">Contact</a></li>
+</ul>
+</nav>
+<nav class="main">
+<ul>
+<li class="menu">
+<a class="fa-bars" href="#menu">Menu</a>
+</li>
+</ul>
+</nav>
+</header>
+<section id="menu">
+<section>
+
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org059d3d7">1. Introduction</a></li>
+<li><a href="#orgeb733c4">2. Prerequisites</a></li>
+<li><a href="#org8322dda">3. Install Microsoft Windows Subsystem for Linux (WSL)</a>
+<ul>
+<li><a href="#org98d9a77">3.1. WSL 1 or WSL 2?</a></li>
+</ul>
+</li>
+<li><a href="#org86fce8d">4. Install Linux Distro</a></li>
+<li><a href="#org319055b">5. Install X Server</a></li>
+<li><a href="#org4eee3c2">6. Install Kevin Kelley's Build of Emacs 26.x.x</a></li>
+<li><a href="#org197d433">7. Install Spacemacs</a>
+<ul>
+<li><a href="#orgbcb948a">7.1. If you have installed WSL 1 then execute the following code.</a></li>
+<li><a href="#org9955383">7.2. If you have installed WSL 2 then execute the following code.</a></li>
+</ul>
+</li>
+<li><a href="#org5f98e6e">8. Launch Spacemacs</a>
+<ul>
+<li><a href="#org5741cb2">8.1. Fixing the Font</a></li>
+</ul>
+</li>
+<li><a href="#org9ca7a0b">9. Conclusion &amp; Next Steps</a></li>
+<li><a href="#org81f20dc">10. How WSL (Ubuntu) files are treated by Windows</a>
+<ul>
+<li><a href="#org7c2bbaf">10.1. In the WSL Terminal</a></li>
+<li><a href="#org82f1252">10.2. WSL Filepath</a></li>
+<li><a href="#org31e7e9a">10.3. Further Reading</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+</section>
+</section>
+
+<div id="main">
+<article class="post">
+<header>
+<div class="title">
+
+<h2>Spacemacs via WSL on Windows 10 Tutorial</h2>
+
+</div>
+<div class="meta">
+
+<time class="published" >[2020-08-04 Tue]</time>
+<a class="author"><span class="name">Hanshen Wang</span><img src="assets/images/ProfilePicture.jpg"/></a>
+</div>
+</header>
+
+<span class="image featured"><img src="https://www.spacemacs.org/img/screenshots/ss1.png"/></span>
+
+<div>
+<section id="outline-container-org059d3d7" class="outline-2">
+<h2 id="org059d3d7"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+A complete step by step outline. Converted from notes of author's own experience. Intended as reference for those who are new to the world of emacs. As the author is not in the software industry by trade, and so this text will not presume mastery of UNIX systems or lisp knowledge. Emacs is at its core a lisp interpreter. It will do a fine job of processing any task that is <b>text-based</b>. This includes tasks not traditionally thought of "editing text", such as project planning, email, rss reading, calendar, and debugging interfaces.  Software that has been around for 40 odd years can be compared to classic works that have lasted hundreds, given the life cycle of the industry. In either case, its worth checking out. Whatever the reason for your interest may be, this tutorial focuses on the setup and installation of spacemacs on Windows 10 boxes. 
+</p>
+
+<p>
+<i>Aside</i> - <b>Why Spacemacs?</b> GNU Emacs is the most widely used variant of emacs, so why not use that? Spacemacs is a community maintained opinionated configuration of GNU Emacs. It's Mnemonic, discoverable and consistent as per their <a href="https://develop.spacemacs.org/">website.</a> Simply put, its a great set of defaults that are excellent for beginners. It lowers the learning curve. This does not by any means stop users from hacking emacs and once proficient enough, perhaps moving to their own custom configuration. The author has been using spacemacs for the past 3 months and this pales in comparison to the many who can measure their usage in decades. It's a good place as any to start.  
+</p>
+</div>
+</section>
+<section id="outline-container-orgeb733c4" class="outline-2">
+<h2 id="orgeb733c4"><span class="section-number-2">2</span> Prerequisites</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li><p>
+<b>64-bit</b> Windows 10 installation <b>version 1607 or greater</b>
+</p>
+
+<p>
+To verify:
+</p>
+<ol class="org-ol">
+<li>Open Windows 10 settings app &gt; <code>system</code> &gt; <code>about</code> , or search in the start menu for the terms in 2) and 3)</li>
+<li>Under <code>Device Specifications</code> check the <code>System Type</code></li>
+<li>Under <code>Windows Specifications</code> check the <code>Version</code></li>
+</ol></li>
+</ul>
+</div>
+</section>
+<section id="outline-container-org8322dda" class="outline-2">
+<h2 id="org8322dda"><span class="section-number-2">3</span> Install Microsoft Windows Subsystem for Linux (WSL)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+The option for a native Windows installation of GNU Emacs does exist, but some tools used in emacs are linux based. Cygwin, msys2, and even a full blown VM can be used to work around this, but for the most hassle free installation with great interoperability the author recommends WSL.
+First, install the Microsoft Windows Subsystem for Linux (WSL). In the simplest terms, this is an optimized virtual machine that allows you to use linux kernels to run linux applications in Windows <i>without</i> dual booting. No need for managing anymore virtual machines. We must enable the feature in Windows.
+Open PowerShell as Administrator and run
+</p>
+<pre class="example">
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</pre>
+</div>
+<div id="outline-container-org98d9a77" class="outline-3">
+<h3 id="org98d9a77"><span class="section-number-3">3.1</span> WSL 1 or WSL 2?</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Now you have to make a choice as to whether you want WSL 1 or WSL 2. In short, if you:
+</p>
+<ul class="org-ul">
+<li>must store project files in the native Windows file system</li>
+<li>have project files that requires cross-compilation with both Windows and Linux tools on the same files</li>
+</ul>
+<p>
+Consider WSL 1. For a more detailed comparison refer to <a href="https://docs.microsoft.com/en-us/windows/wsl/compare-versions">Comparing WSL 2 and WSL 1 | Microsoft Docs</a>. Otherwise, WSL2 offers better performance and compatibility.
+</p>
+</div>
+<div id="outline-container-org7e19d84" class="outline-4">
+<h4 id="org7e19d84"><span class="section-number-4">3.1.1</span> For WSL 1:</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Restart your machine, and move onto the next section.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdb551f4" class="outline-4">
+<h4 id="orgdb551f4"><span class="section-number-4">3.1.2</span> For WSL 2:</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+Enable virtual machine platform feature in Windows.
+</p>
+<pre class="example">
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</pre>
+<p>
+Restart your machine
+</p>
+
+<p>
+Set WSL 2 as default version in Administrator PowerShell
+</p>
+<pre class="example">
+wsl --set-default-version 2
+</pre>
+<p>
+Move onto the next section.
+</p>
+
+<p>
+For manual updating of WSL 1 to WSL 2, please refer to Microsoft Documentation:<a href="https://docs.microsoft.com/en-ca/windows/wsl/wsl2-kernel">Updating the WSL 2 Linux kernel | Microsoft Docs</a> 
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="outline-container-org86fce8d" class="outline-2">
+<h2 id="org86fce8d"><span class="section-number-2">4</span> Install Linux Distro</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+For the sake of simplicity, this was done through the Windows store. The author has chosen to roll with ubuntu. Searching for ubuntu will yield 3 versions in the Microsoft store. Out of all 3 available versions, the one without version numbers will stay on the latest Long Term Support (LTS) build. If you know you want a specific version, install the appropriately named package. There are other linux distributions available should you want them.
+If for some reason the Windows store is not accessible, you can manually download distributions via this Microsoft Webpage:<a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#installing-your-distro">Manually download Windows Subsystem for Linux (WSL) Distros | Microsoft Docs</a> . Or via PowerShell (example below uses ubuntu 16.04):
+</p>
+<pre class="example">
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
+</pre>
+<p>
+After manually downloading the file you will want to install it. Navigate to the directory containing the distro .appx file and run the 2 commands:
+</p>
+<pre class="example">
+Set-Location -Path C:\Users\$YOURUSER$\downloads\ -PassThru
+Add-AppxPackage .\app_name.appx
+</pre>
+<p>
+Launching your freshly installed distro through the start menu will prompt you to create a user account upon first startup. You will notice that the installation of ubuntu or whichever linux distro you have selected will be command line interface only. Once you finished creating an account, you can safely <code>$ exit</code> the WSL bash shell and continue on with the tutorial.
+</p>
+</div>
+</section>
+<section id="outline-container-org319055b" class="outline-2">
+<h2 id="org319055b"><span class="section-number-2">5</span> Install X Server</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+This is the software that allows linux to display GUI elements. You have many options here: 
+</p>
+<ol class="org-ol">
+<li>Vcxsrv</li>
+<li>Xming</li>
+<li>Mobaxterm</li>
+</ol>
+<p>
+In particular, if you have selected WSL 2, the author recommends Vcxsrv. 
+</p>
+
+<p>
+<a href="https://sourceforge.net/projects/vcxsrv/">VcXsrv Windows X Server download | SourceForge.net</a>
+</p>
+
+<p>
+Download and run the sourceforge installer and you can launch the program by the "Xlaunch" shortcut through the start menu. No need to change any of the settings. Just click next until the end and you should see a system tray icon similar to an X. 
+</p>
+
+<p>
+<a href="https://miro.medium.com/max/2672/1*VoXIat-NRS1M4hov0UHRwQ.png">VcXsrv logo in system tray</a>
+</p>
+</div>
+</section>
+<section id="outline-container-org4eee3c2" class="outline-2">
+<h2 id="org4eee3c2"><span class="section-number-2">6</span> Install Kevin Kelley's Build of Emacs 26.x.x</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Start ubuntu through WSL (search for ubuntu in the Windows start menu). Remember, Spacemacs is a preconfigured setup for emacs. Therefore you need to install emacs first. Your linux distro may come with a default installation of emacs. If the emacs build is older than version 26.3, you may run into issues with XWindows support. To fix this add Kevin Kelley's builds of emacs 26.x.x with XWindows supports. Enter the following in the WSL Terminal.
+</p>
+<pre class="example">
+$ sudo apt update &amp;&amp; sudo apt upgrade
+$ sudo add-apt-repository ppa:kelleyk/emacs
+$ sudo apt update
+$ sudo apt install emacs26
+</pre>
+<p>
+Of course, you may choose to build emacs from source. At the time of this writing, emacs 27.1 has been released. One major benefit is a native, faster JSON parsing module. However, that is beyond the scope of this tutorial. The method described above is the most painless way to get emacs up and running in WSL.  
+</p>
+</div>
+</section>
+<section id="outline-container-org197d433" class="outline-2">
+<h2 id="org197d433"><span class="section-number-2">7</span> Install Spacemacs</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Enter the following in your WSL terminal to install spacemacs from the develop branch. Author recommends develop branch over master branch as bugs tend to get fixed more quickly on develop. You have the option to change later on. View the official spacemacs website for more information.
+</p>
+<pre class="example">
+$ git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+</pre>
+<p>
+Afterwards, configure your X Server correctly. In the WSL terminal, export the DISPLAY variable. 
+</p>
+</div>
+<div id="outline-container-orgbcb948a" class="outline-3">
+<h3 id="orgbcb948a"><span class="section-number-3">7.1</span> If you have installed WSL 1 then execute the following code.</h3>
+<div class="outline-text-3" id="text-7-1">
+<pre class="example">
+$ export DISPLAY=:0.0
+</pre>
+</div>
+</div>
+<div id="outline-container-org9955383" class="outline-3">
+<h3 id="org9955383"><span class="section-number-3">7.2</span> If you have installed WSL 2 then execute the following code.</h3>
+<div class="outline-text-3" id="text-7-2">
+<pre class="example">
+$ export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2&gt;/dev/null):0
+$ export LIBGL_ALWAYS_INDIRECT=1
+</pre>
+<p>
+The difference between WSl 1 &amp; 2 is due to changes in networking that came with WSL 2 update<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. You will probably want to put the two export commands into your .bashrc file, located in <code>~/home/$USER$/</code> folder. Do this after completing the last step below.
+</p>
+</div>
+</div>
+</section>
+<section id="outline-container-org5f98e6e" class="outline-2">
+<h2 id="org5f98e6e"><span class="section-number-2">8</span> Launch Spacemacs</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Now for the moment of truth. Launch spacemacs by the following command in the WSL terminal:
+</p>
+<pre class="example">
+$ emacs26 &amp; 
+</pre>
+<p>
+On the initial startup, you will be presented with a few choices. Pick <code>All aboard the evil.....Vim</code> and then <code>Full Installation</code> for the second choice. The first option is asking if you want the chordal shortcuts of traditional emacs or vim style shortcuts. Author recommends vim style. Do not worry, you will be able to change the first option later on in your dotspacemacs file and if you are a beginner, the full installation is preferred over the base installation. Now you will have to wait for all the MELPA packages to download and install. Be patient. Once completed you will have successfully installed spacemacs :). 
+</p>
+</div>
+<div id="outline-container-org5741cb2" class="outline-3">
+<h3 id="org5741cb2"><span class="section-number-3">8.1</span> Fixing the Font</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+If you get a message informing you that "adobe source code pro" cannot be found, the font can be downloaded with: 
+</p>
+<pre class="example">
+$ wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+</pre>
+<p>
+Or you may visit the website at:<a href="https://github.com/adobe-fonts/source-code-pro/"> GitHub - adobe-fonts/source-code-pro: Monospaced font family for user interfa&#x2026;</a> to download the font.
+Now unzip the file and move the Open Type fonts (*.otf) files to <code>/.fonts</code> or if you want a system wide install use <code>/usr/local/share/fonts/</code>
+</p>
+<pre class="example">
+$ unzip 1.050R-it.zip
+$ mkdir -p ~/.fonts
+$ cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+</pre>
+<p>
+Lastly, refresh the cache.
+</p>
+<pre class="example">
+$ fc-cache -f -v
+</pre>
+</div>
+</div>
+</section>
+<section id="outline-container-org9ca7a0b" class="outline-2">
+<h2 id="org9ca7a0b"><span class="section-number-2">9</span> Conclusion &amp; Next Steps</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Hopefully everything has gone smoothly. If not, feel free to send me a message from the contact page on this website. Should it be of interest, here are the author's current use cases:
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Email</td>
+<td class="org-left">Mu4e &amp; Offlineimap</td>
+</tr>
+
+<tr>
+<td class="org-left">RSS</td>
+<td class="org-left">Elfeed</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">Org-noter &amp; Org-ref</td>
+</tr>
+
+<tr>
+<td class="org-left">Writing</td>
+<td class="org-left">Latex with Auctex</td>
+</tr>
+
+<tr>
+<td class="org-left">PIM</td>
+<td class="org-left">Org-mode &amp; Org-roam</td>
+</tr>
+
+<tr>
+<td class="org-left">This Website</td>
+<td class="org-left">lsp-java and dap mode</td>
+</tr>
+
+<tr>
+<td class="org-left">Version Control</td>
+<td class="org-left">Magit &amp; Ediff</td>
+</tr>
+
+<tr>
+<td class="org-left">PDF's</td>
+<td class="org-left">Pdf-tools</td>
+</tr>
+
+<tr>
+<td class="org-left">Document Conversion</td>
+<td class="org-left">Pandoc</td>
+</tr>
+</tbody>
+</table>
+<p>
+Of course, if all you want to do is edit text in spacemacs, you get the best of vim's modal editing via emacs-evil (automatically included should you select <code>All aboard the evil ..... Vim</code>) to do that. As for next steps, here are some pointers.
+</p>
+<ol class="org-ol">
+<li>This is not a long video and covers the <b>minimum</b> you need to know, it is the most current and concise video specifically for spacemacs the author had found: <a href="https://www.youtube.com/watch?v=fdLCuJcS2Aw">Spacemacs: Installation, Configuration, and Navigation Tutorial - YouTube</a> . Author wholeheartedly recommends the rest of his videos.</li>
+<li>Complete included spacemacs vim (or emacs, preferably both) tutorial for a basic text manipulation understanding. Access this via <code>SPC h T v</code> inside spacemacs for the vim tutorial. Afterwards the emacs tutorial can be reached via <code>SPC h T e</code>. Even if you prefer vim, knowing some basic emacs style commands is an asset.</li>
+<li>Spacemacs has great documentation at <a href="https://develop.spacemacs.org/doc/DOCUMENTATION.html">their official website</a> but of note is that the same documentation can be found via <code>SPC h SPC</code>. Inputting this command opens up a <b>helm</b> buffer on the bottom of your screen. You can <code>ESC</code> to exit or use <code>C-j</code> and <code>C-k</code> to move up and down (In emacs lingo, <code>C-a</code> means ctrl+a and <code>M-a</code> means alt+a). You can of course fill in the <i>pattern</i> field and narrow results down by typing text. Open a selection by pressing <code>RET</code> (<code>RET</code> here means return or the enter key on your keyboard). Try it with <code>SPC h SPC</code> then typing <code>helm</code> then pressing <code>RET</code>. You can close the documentation buffer by pressing <code>SPC b d</code> (meaning buffer delete). By now, you'll have noticed that by pressing <code>SPC h</code> (h for help) opens a hydra menu on the bottom where other useful information can be found.</li>
+</ol>
+<p>
+One "killer feature" you will hear about in emacs is org-mode. Documentation can also be found on their official <a href="https://orgmode.org/">website.</a> Like a lot of emacs packages it can seem like a bit of a labyrinth at first, so <a href="https://www.youtube.com/watch?v=S4f-GUxu3CY">this is again the best video tutorial the author has watched.</a> Thank you for reading and I sincerely hope this tutorial has helped you. Any feedback can be sent to me through the contact page on this website. Have a nice one. 
+</p>
+
+<p>
+Hanshen
+</p>
+</div>
+</section>
+<section id="outline-container-org81f20dc" class="outline-2">
+<h2 id="org81f20dc"><span class="section-number-2">10</span> How WSL (Ubuntu) files are treated by Windows</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+<b>DO NOT</b> in any circumstances, access the linux files under <code>AppData/local/packages/CanonicalGroupLimited.Ubuntu20.04...</code> etc. in windows. Failure to comply will result in a corrupted linux distribution. According to the developers, this is due to differences in how file metadata is implemented in linux versus windows. 2 methods of properly accessing your files:
+</p>
+</div>
+<div id="outline-container-org7c2bbaf" class="outline-3">
+<h3 id="org7c2bbaf"><span class="section-number-3">10.1</span> In the WSL Terminal</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+To access your linux files, enter in <code>$ explorer.exe .</code> (include the period after exe) to open up linux files in windows explorer. Operation from here on out is the same as regular explorer usage. 
+</p>
+</div>
+</div>
+<div id="outline-container-org82f1252" class="outline-3">
+<h3 id="org82f1252"><span class="section-number-3">10.2</span> WSL Filepath</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+Location of these files is under <code>\\wsl$</code>. Click on windows explorer address bar at the top to input this address.
+</p>
+</div>
+</div>
+<div id="outline-container-org31e7e9a" class="outline-3">
+<h3 id="org31e7e9a"><span class="section-number-3">10.3</span> Further Reading</h3>
+<div class="outline-text-3" id="text-10-3">
+<ul class="org-ul">
+<li><a href="https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/">What’s new for WSL in Windows 10 version 1903? | Windows Command Line</a></li>
+<li><a href="https://devblogs.microsoft.com/commandline/a-deep-dive-into-how-wsl-allows-windows-to-access-linux-files/">A Deep Dive Into How WSL Allows Windows to Access Linux Files | Windows Comma&#x2026;</a></li>
+<li><a href="https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/">Do not change Linux files using Windows apps and tools | Windows Command Line</a></li>
+<li><a href="https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/">How to Access Your Linux (WSL) Files in Windows 10</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://docs.microsoft.com/en-us/windows/wsl/compare-versions">Comparing WSL 2 and WSL 1 | Microsoft Docs</a> 
+</p>
+</article>
+</div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>

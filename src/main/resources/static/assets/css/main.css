@@ -174,8 +174,8 @@ a {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
-		color: inherit;
+		border-bottom: dotted 1px rgba(17,66,114,0.8);
+		color: rgba(17,66,144);
 		text-decoration: none;
 }
 
@@ -210,7 +210,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
 		color: #3c3b3b;
-		font-family: "EB Garamond", serif;
+		font-family: "Cinzel", serif;
 		font-weight: 400;
 		letter-spacing: 0.25em;
 		line-height: 1.65;
@@ -276,6 +276,8 @@ pre {
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
+    white-space: pre-wrap;
+    word-break: keep-all
 }
 
 pre code {
@@ -2080,13 +2082,13 @@ textarea:focus {
 		box-shadow: inset 0 0 0 1px #2ebaae;
 }
 
-.select-wrapper {
+.select-content {
 		text-decoration: none;
 		display: block;
 		position: relative;
 }
 
-.select-wrapper:before {
+.select-content:before {
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -2099,7 +2101,7 @@ textarea:focus {
 		font-weight: 900;
 }
 
-.select-wrapper:before {
+.select-content:before {
 		color: rgba(160, 160, 160, 0.3);
 		content: '\f078';
 		display: block;
@@ -2113,7 +2115,7 @@ textarea:focus {
 		width: 2.75em;
 }
 
-.select-wrapper select::-ms-expand {
+.select-content select::-ms-expand {
 		display: none;
 }
 
@@ -2768,7 +2770,7 @@ ul.posts article header > :last-child {
 }
 
 .post > header .title h2 {
-		font-weight: 900;
+		font-weight: 400;
 		font-size: 1.5em;
 }
 
@@ -3030,7 +3032,7 @@ ul.posts article header > :last-child {
 
 /* Section/Article */
 
-section.special, article.special {
+#section.special, article.special {
 		text-align: center;
 }
 
@@ -3045,37 +3047,36 @@ header p {
 }
 
 /* 3. ScrollSpy active styles (see JS tab for activation) */
-.section-nav li.active > a {
+#table-of-contents li.active > a {
 	  color: #333;
 	  font-weight: 500;
 }
 
 /* Sidebar Navigation */
-.section-nav {
-	  padding-left: 0;
+#table-of-contents {
+	  padding-right: 5em;
 	  border-left: 1px solid #efefef;
 }
 
-.section-nav a {
+#table-of-contents li {
+    list-style-type: none;
+}
+
+#table-of-contents a {
 	  text-decoration: none;
 	  display: block;
-	  padding: 0 .125rem;
-	  color: #ccc;
+	  color: #333;
 	  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
-.section-nav a:hover,
-.section-nav a:focus {
+#table-of-contents a:hover,
+#table-of-contents a:focus {
 	  color: #665;
 }
 
-/** enlarge the sections for this demo, so that we have a long scrollable page **/
-section {
-	  padding-bottom: 20rem;
-}
 /* Table */
 
-.table-wrapper {
+.table-content {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
 }
@@ -3347,9 +3348,9 @@ body {
 
 }
 
-/* Wrapper */
+/* Content */
 
-#wrapper {
+#content {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3369,13 +3370,13 @@ body {
 		width: 90em;
 }
 
-body.is-menu-visible #wrapper {
+body.is-menu-visible #content {
 		opacity: 0.15;
 }
 
 @media screen and (max-width: 1680px) {
 
-		#wrapper {
+		#content {
 				padding: 3em;
 		}
 
@@ -3383,7 +3384,7 @@ body.is-menu-visible #wrapper {
 
 @media screen and (max-width: 1280px) {
 
-		#wrapper {
+		#content {
 				display: block;
 		}
 
@@ -3391,13 +3392,13 @@ body.is-menu-visible #wrapper {
 
 @media screen and (max-width: 736px) {
 
-		#wrapper {
+		#content {
 				padding: 1.5em;
 		}
 
 }
 
-body.single #wrapper {
+body.single #content {
 		display: block;
 }
 
@@ -3412,17 +3413,28 @@ body.single #wrapper {
 		width: 100%;
 }
 
-/** page layout **/
-main {
-	  display: grid;
-	  grid-template-columns: 1fr 15em;
-	  max-width: 100em;
-	  width: 90%;
-	  margin: 0 auto;
-}
 /* Not concerning div id="main" but the plain <main> element tag */
 /* Crucial in implmentation of Smooth Scrolling Sticky */
 /* Scrollspy Navigation */
+/** page layout **/
+main {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+	  display: flex;
+		-moz-flex-grow: 1;
+		-webkit-flex-grow: 1;
+		-ms-flex-grow: 1;
+		flex-grow: 1;
+		-ms-flex: 1;
+	  grid-template-columns: 20em 1fr;
+	  max-width: 100px;
+	  min-width: 0;
+	  width: 90%;
+	  margin: 0 0 3em 0;
+    position: relative;
+    overflow-wrap: break-word;
+}
 main > nav {
 	  position: sticky;
 	  top: 2rem;
